@@ -19,5 +19,11 @@ Copy the two files, `Mole.Visualizer.VS2015.dll` and `Mole.Visualizer.VS2015.dll
 
 Start Visual Studio 2015 and enjoy happy debugging.
 
+## ASP.NET Developers Please Read This
+
+When using Mole with ASP.NET projects that utilize IIS as the web server, as opposed to the Visual Studio's built in web server, you MUST give the account that the web site is running under, Read and Read & Execute permissions to the \Visualizers directory.
+
+If you do not do this, you will get an exception when attempting to load the visualizer in a debugging session. You would get this exception for any visualizer and not just Mole. This is because the ASPNET account has very few permissions on your computer. Adding these permissions prevents this exception.
+
 ## Documentation and Training Videos
 [https://oceanware.wordpress.com/mole-visual-studio-debugger-visualizer/](https://oceanware.wordpress.com/mole-visual-studio-debugger-visualizer/ "Mole Documentation and Training Videos")
